@@ -1,0 +1,126 @@
+
+/*main layout of the page*/
+.main-grid-layout{
+	display: grid;
+	margin-bottom: 100px;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 20px;
+	row-gap: 24px;
+}
+/*adjusts the number of videos on each row depending on window size*/
+@media (max-width: 800px){
+	.main-grid-layout{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media (max-width: 500px){
+	.main-grid-layout{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 801px) and (max-width: 1099px){
+	.main-grid-layout{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media (min-width: 1100px){
+	.main-grid-layout{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
+.thumbnail-row{
+	position: relative;
+	cursor: pointer;
+}
+.video-duration{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	background-color: black;
+	font-weight: bold;
+	color: white;
+	font-size: 12px;
+	padding: 4px;
+	border-radius: 2px;
+}
+
+.thumbnail{
+	width: 100%;/*thumbnail picture occupies whole column */
+}
+
+/*grid for information under video*/
+.video-preview-gird{
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	column-gap: 4px;
+	margin-top: 8px;
+
+}
+
+.profile-img{
+	width: 40px;
+	border-radius: 25px;
+}
+
+
+.video-title{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.video-author, 
+.video-stats{
+	font-size: 12px;
+	color: rgb(96, 96, 96);
+}
+
+.video-author{
+	margin-top: 6px;
+	margin-bottom: 5px;
+}
+
+/*channel subscriber info when hover (like tooltips)*/
+.profile-img-container{
+	position: relative;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.profile-img-container:hover .specific-profile-info-container{
+	opacity: 1;
+}
+
+.specific-profile-info-container{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	opacity: 0;
+	white-space: nowrap;
+	bottom: -38px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+	pointer-events: none;
+	transition: opacity 0.2s;
+	z-index: 100;
+	
+}
+.pfp img{
+	width: 50px;
+	border-radius: 50%;
+}
+.pf-info{
+	margin-left: 10px;
+}
+
+.subscriber-count{
+	font-size: 14px;
+	color: rgb(96, 96, 96);
+	margin-top: 4px;
+}
+
