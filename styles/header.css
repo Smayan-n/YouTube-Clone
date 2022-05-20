@@ -104,7 +104,6 @@
 .youtube-apps-icon-container .tooltip,
 .notifications-icon-container .tooltip{
 	position: absolute;
-	display: inline-block;
 	bottom: -47px;
 	background-color: rgb(109, 109, 109);
 	color: white;
